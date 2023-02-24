@@ -50,6 +50,10 @@
 		568AA25229A774B100302CF6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25129A774B100302CF6 /* UserService.swift */; };
 		568AA25429A7EA0B00302CF6 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25329A7EA0B00302CF6 /* UploadPostViewModel.swift */; };
 		568AA25629A7F3A800302CF6 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25529A7F3A800302CF6 /* TextArea.swift */; };
+		568AA25829A87F5E00302CF6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25729A87F5E00302CF6 /* Post.swift */; };
+		568AA25A29A8807E00302CF6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25929A8807E00302CF6 /* FeedViewModel.swift */; };
+		568AA25C29A88DCA00302CF6 /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */; };
+		568AA25F29A8B99000302CF6 /* FeedCellVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25E29A8B99000302CF6 /* FeedCellVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,11 @@
 		568AA25129A774B100302CF6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		568AA25329A7EA0B00302CF6 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		568AA25529A7F3A800302CF6 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		568AA25729A87F5E00302CF6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		568AA25929A8807E00302CF6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
+		568AA25D29A8939000302CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		568AA25E29A8B99000302CF6 /* FeedCellVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				568AA23D29A75BB600302CF6 /* User.swift */,
+				568AA25729A87F5E00302CF6 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,10 +147,13 @@
 		5619ADEB29A0BC9900DC771D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				568AA25329A7EA0B00302CF6 /* UploadPostViewModel.swift */,
+				568AA24D29A7604800302CF6 /* SearchViewModel.swift */,
 				5619ADFC29A0BE2000DC771D /* Authentication */,
 				5619ADFB29A0BE1700DC771D /* Profile */,
 				5619ADFA29A0BE1100DC771D /* Notification */,
 				5619ADF929A0BE0C00DC771D /* Feed */,
+				568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,8 +265,8 @@
 		5619ADF929A0BE0C00DC771D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				568AA24D29A7604800302CF6 /* SearchViewModel.swift */,
-				568AA25329A7EA0B00302CF6 /* UploadPostViewModel.swift */,
+				568AA25929A8807E00302CF6 /* FeedViewModel.swift */,
+				568AA25E29A8B99000302CF6 /* FeedCellVIewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -300,6 +313,7 @@
 		5671DC9C299B887E00C34F07 /* instaClone */ = {
 			isa = PBXGroup;
 			children = (
+				568AA25D29A8939000302CF6 /* Info.plist */,
 				5619ADED29A0BCAA00DC771D /* Utils */,
 				5619ADEC29A0BCA100DC771D /* API */,
 				5619ADEB29A0BC9900DC771D /* ViewModel */,
@@ -405,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568AA25A29A8807E00302CF6 /* FeedViewModel.swift in Sources */,
 				5619AE0229A0BF3800DC771D /* SearchView.swift in Sources */,
 				5619AE0029A0BF0600DC771D /* FeedView.swift in Sources */,
 				5619AE0E29A21D6B00DC771D /* PostGridView.swift in Sources */,
@@ -414,11 +429,13 @@
 				5619ADF029A0BD6900DC771D /* ContentView.swift in Sources */,
 				5671DC9E299B887E00C34F07 /* instaCloneApp.swift in Sources */,
 				5619ADFE29A0BEB900DC771D /* MainTabView.swift in Sources */,
+				568AA25C29A88DCA00302CF6 /* PostGridViewModel.swift in Sources */,
 				5619AE2829A4BFDB00DC771D /* ResetPasswordView.swift in Sources */,
 				5619AE0829A0BF7600DC771D /* UploadPostView.swift in Sources */,
 				568AA25429A7EA0B00302CF6 /* UploadPostViewModel.swift in Sources */,
 				5619AE2229A3DAC600DC771D /* ImagePicker.swift in Sources */,
 				568AA25629A7F3A800302CF6 /* TextArea.swift in Sources */,
+				568AA25F29A8B99000302CF6 /* FeedCellVIewModel.swift in Sources */,
 				5619AE1829A239C600DC771D /* ProfileHeaderView.swift in Sources */,
 				568AA25229A774B100302CF6 /* UserService.swift in Sources */,
 				5619AE1A29A23E9900DC771D /* UserStartView.swift in Sources */,
@@ -426,6 +443,7 @@
 				5619AE1029A220A700DC771D /* UserCell.swift in Sources */,
 				5619AE0C29A2196500DC771D /* SearchBar.swift in Sources */,
 				5619AE2C29A4C4BD00DC771D /* CustomSecureField.swift in Sources */,
+				568AA25829A87F5E00302CF6 /* Post.swift in Sources */,
 				568AA24E29A7604800302CF6 /* SearchViewModel.swift in Sources */,
 				5619AE0429A0BF4F00DC771D /* NotificationView.swift in Sources */,
 				5619AE0A29A0C86F00DC771D /* FeedCell.swift in Sources */,
@@ -568,7 +586,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"instaClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = instaClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -596,7 +614,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"instaClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = instaClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

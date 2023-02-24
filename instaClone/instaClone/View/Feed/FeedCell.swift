@@ -6,27 +6,38 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedCell: View {
+    
+    //let viewMoel.post: Post
+    @ObservedObject var viewModel: FeedCellViewModel
+    
+    var didLike: Bool { return viewModel.post.didLikes ?? false }
+    
+    init(viewModel: FeedCellViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         VStack(alignment: .leading){
             
             //user
             HStack{
-                Image(systemName: "house")
+                KFImage(URL(string: viewModel.post.ownerImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36,height: 36)
                     .clipped()
                     .cornerRadius(18)
                 
-                Text("user")
+                Text(viewModel.post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
             }
             .padding([.leading,.bottom], 8)
             
             // Image
-            Image(systemName: "heart")
+            KFImage(URL(string: viewModel.post.imageUrl))
                 .resizable()
                 .scaledToFill()
                 .frame(maxHeight: 350)
@@ -35,17 +46,22 @@ struct FeedCell: View {
             
             // button
             HStack(spacing: 16){
-                Button(action: {}, label: {
-                    Image(systemName: "heart")
+                Button(action: {
+                    didLike ? viewModel.unlike() : viewModel.like()
+                }, label: {
+                    Image(systemName: didLike ? "heartfill" : "heart")
                         .resizable()
                         .scaledToFill()
+                        .foregroundColor(didLike ? .red : .black)
                         .frame(width: 20,height: 20)
                         .font(.system(size: 20))
                         .padding(4)
                         
                 })
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                }, label: {
                     Image(systemName: "bubble.right")
                         .resizable()
                         .scaledToFill()
@@ -70,7 +86,7 @@ struct FeedCell: View {
             
             
             //likes
-            Text(" 3likes")
+            Text(viewModel.likeString)
                 .font(.system(size: 14,weight: .semibold))
                 .padding(.leading, 4)
                 .padding(.bottom, 1)
@@ -78,7 +94,7 @@ struct FeedCell: View {
             // caption
             
             HStack{
-                Text("dasdaad").font(.system(size: 14, weight: .semibold))
+                Text(viewModel.post.ownerUsername).font(.system(size: 14, weight: .semibold)) + Text("\(viewModel.post.caption)")
                     .font(.system(size: 15))
             }
             .padding(.horizontal, 4)
@@ -94,8 +110,8 @@ struct FeedCell: View {
     }
 }
 
-struct FeedCell_Previews: PreviewProvider {
+/*struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
         FeedCell()
     }
-}
+}*/
