@@ -54,6 +54,11 @@
 		568AA25A29A8807E00302CF6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25929A8807E00302CF6 /* FeedViewModel.swift */; };
 		568AA25C29A88DCA00302CF6 /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */; };
 		568AA25F29A8B99000302CF6 /* FeedCellVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA25E29A8B99000302CF6 /* FeedCellVIewModel.swift */; };
+		568AA26529AB800000302CF6 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26429AB800000302CF6 /* CommentViewModel.swift */; };
+		568AA26729AB801600302CF6 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26629AB801600302CF6 /* CommentView.swift */; };
+		568AA26929AB802300302CF6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26829AB802300302CF6 /* CommentCell.swift */; };
+		568AA26B29AB831600302CF6 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26A29AB831600302CF6 /* CustomInputView.swift */; };
+		568AA26D29AB895900302CF6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26C29AB895900302CF6 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +104,11 @@
 		568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
 		568AA25D29A8939000302CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		568AA25E29A8B99000302CF6 /* FeedCellVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellVIewModel.swift; sourceTree = "<group>"; };
+		568AA26429AB800000302CF6 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		568AA26629AB801600302CF6 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		568AA26829AB802300302CF6 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		568AA26A29AB831600302CF6 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		568AA26C29AB895900302CF6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 			children = (
 				568AA23D29A75BB600302CF6 /* User.swift */,
 				568AA25729A87F5E00302CF6 /* Post.swift */,
+				568AA26C29AB895900302CF6 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 				5619ADFA29A0BE1100DC771D /* Notification */,
 				5619ADF929A0BE0C00DC771D /* Feed */,
 				568AA25B29A88DC900302CF6 /* PostGridViewModel.swift */,
+				568AA26429AB800000302CF6 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +232,8 @@
 		5619ADF429A0BD9700DC771D /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				568AA26629AB801600302CF6 /* CommentView.swift */,
+				568AA26829AB802300302CF6 /* CommentCell.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -249,6 +263,7 @@
 				5619AE0D29A21D6B00DC771D /* PostGridView.swift */,
 				5619AE0F29A220A700DC771D /* UserCell.swift */,
 				5619AE1129A220B200DC771D /* UserListView.swift */,
+				568AA26A29AB831600302CF6 /* CustomInputView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -421,11 +436,13 @@
 			files = (
 				568AA25A29A8807E00302CF6 /* FeedViewModel.swift in Sources */,
 				5619AE0229A0BF3800DC771D /* SearchView.swift in Sources */,
+				568AA26B29AB831600302CF6 /* CustomInputView.swift in Sources */,
 				5619AE0029A0BF0600DC771D /* FeedView.swift in Sources */,
 				5619AE0E29A21D6B00DC771D /* PostGridView.swift in Sources */,
 				5619AE2629A4BF9B00DC771D /* RegistrationView.swift in Sources */,
 				5619AE2A29A4C49700DC771D /* CustomTextField.swift in Sources */,
 				568AA23A29A62DEB00302CF6 /* ImageUploader.swift in Sources */,
+				568AA26529AB800000302CF6 /* CommentViewModel.swift in Sources */,
 				5619ADF029A0BD6900DC771D /* ContentView.swift in Sources */,
 				5671DC9E299B887E00C34F07 /* instaCloneApp.swift in Sources */,
 				5619ADFE29A0BEB900DC771D /* MainTabView.swift in Sources */,
@@ -433,6 +450,7 @@
 				5619AE2829A4BFDB00DC771D /* ResetPasswordView.swift in Sources */,
 				5619AE0829A0BF7600DC771D /* UploadPostView.swift in Sources */,
 				568AA25429A7EA0B00302CF6 /* UploadPostViewModel.swift in Sources */,
+				568AA26929AB802300302CF6 /* CommentCell.swift in Sources */,
 				5619AE2229A3DAC600DC771D /* ImagePicker.swift in Sources */,
 				568AA25629A7F3A800302CF6 /* TextArea.swift in Sources */,
 				568AA25F29A8B99000302CF6 /* FeedCellVIewModel.swift in Sources */,
@@ -445,7 +463,9 @@
 				5619AE2C29A4C4BD00DC771D /* CustomSecureField.swift in Sources */,
 				568AA25829A87F5E00302CF6 /* Post.swift in Sources */,
 				568AA24E29A7604800302CF6 /* SearchViewModel.swift in Sources */,
+				568AA26729AB801600302CF6 /* CommentView.swift in Sources */,
 				5619AE0429A0BF4F00DC771D /* NotificationView.swift in Sources */,
+				568AA26D29AB895900302CF6 /* Comment.swift in Sources */,
 				5619AE0A29A0C86F00DC771D /* FeedCell.swift in Sources */,
 				568AA23E29A75BB600302CF6 /* User.swift in Sources */,
 				568AA23C29A759C400302CF6 /* Constans.swift in Sources */,
