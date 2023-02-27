@@ -1,28 +1,23 @@
 //
 //  FeedView.swift
-//  instaClone
+//  InstagramSwiftUITutorial
 //
-//  Created by 박경춘 on 2023/02/18.
+//  Created by Stephen Dowless on 12/26/20.
 //
 
 import SwiftUI
 
 struct FeedView: View {
-    
     @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
         ScrollView {
-            
             LazyVStack(spacing: 32) {
                 ForEach(viewModel.posts) { post in
-                    
                     FeedCell(viewModel: FeedCellViewModel(post: post))
                 }
-            }
-            .padding(.top)
+            }.padding(.top)
         }
-        
     }
 }
 
