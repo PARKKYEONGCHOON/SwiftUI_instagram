@@ -62,6 +62,9 @@
 		568AA26F29AC8F7700302CF6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA26E29AC8F7700302CF6 /* Notification.swift */; };
 		568AA27129AC961600302CF6 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA27029AC961600302CF6 /* NotificationViewModel.swift */; };
 		568AA27329ACDB6200302CF6 /* NotificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA27229ACDB6200302CF6 /* NotificationCellViewModel.swift */; };
+		568AA27529ADBA2400302CF6 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA27429ADBA2400302CF6 /* LazyView.swift */; };
+		568AA27729ADC73C00302CF6 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA27629ADC73C00302CF6 /* EditProfileView.swift */; };
+		568AA27929ADCA9F00302CF6 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568AA27829ADCA9F00302CF6 /* EditProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +118,9 @@
 		568AA26E29AC8F7700302CF6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		568AA27029AC961600302CF6 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		568AA27229ACDB6200302CF6 /* NotificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewModel.swift; sourceTree = "<group>"; };
+		568AA27429ADBA2400302CF6 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		568AA27629ADC73C00302CF6 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		568AA27829ADCA9F00302CF6 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,7 @@
 				5619AE2B29A4C4BC00DC771D /* CustomSecureField.swift */,
 				568AA23B29A759C400302CF6 /* Constans.swift */,
 				568AA25529A7F3A800302CF6 /* TextArea.swift */,
+				568AA27429ADBA2400302CF6 /* LazyView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 				5619AE1729A239C600DC771D /* ProfileHeaderView.swift */,
 				5619AE1929A23E9900DC771D /* UserStartView.swift */,
 				5619AE1D29A2408800DC771D /* ProfileActionButtonView.swift */,
+				568AA27629ADC73C00302CF6 /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				568AA24F29A7718B00302CF6 /* ProfileViewModel.swift */,
+				568AA27829ADCA9F00302CF6 /* EditProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -445,6 +454,7 @@
 			files = (
 				568AA25A29A8807E00302CF6 /* FeedViewModel.swift in Sources */,
 				568AA27129AC961600302CF6 /* NotificationViewModel.swift in Sources */,
+				568AA27529ADBA2400302CF6 /* LazyView.swift in Sources */,
 				5619AE0229A0BF3800DC771D /* SearchView.swift in Sources */,
 				568AA26B29AB831600302CF6 /* CustomInputView.swift in Sources */,
 				5619AE0029A0BF0600DC771D /* FeedView.swift in Sources */,
@@ -460,11 +470,13 @@
 				5619AE2829A4BFDB00DC771D /* ResetPasswordView.swift in Sources */,
 				5619AE0829A0BF7600DC771D /* UploadPostView.swift in Sources */,
 				568AA25429A7EA0B00302CF6 /* UploadPostViewModel.swift in Sources */,
+				568AA27729ADC73C00302CF6 /* EditProfileView.swift in Sources */,
 				568AA26929AB802300302CF6 /* CommentCell.swift in Sources */,
 				5619AE2229A3DAC600DC771D /* ImagePicker.swift in Sources */,
 				568AA25629A7F3A800302CF6 /* TextArea.swift in Sources */,
 				568AA25F29A8B99000302CF6 /* FeedCellVIewModel.swift in Sources */,
 				5619AE1829A239C600DC771D /* ProfileHeaderView.swift in Sources */,
+				568AA27929ADCA9F00302CF6 /* EditProfileViewModel.swift in Sources */,
 				568AA25229A774B100302CF6 /* UserService.swift in Sources */,
 				5619AE1A29A23E9900DC771D /* UserStartView.swift in Sources */,
 				5619AE0629A0BF5E00DC771D /* ProfileView.swift in Sources */,

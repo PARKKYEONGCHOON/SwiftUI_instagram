@@ -25,9 +25,11 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
                 HStack(spacing: 14) {
-                    UserStatView(value: 1, title: "Post")
-                    UserStatView(value: 2, title: "Followers")
-                    UserStatView(value: 4, title: "Following")
+                    
+                    UserStatView(value: viewModel.user.stats?.posts ?? 0, title: "Post")
+                    UserStatView(value: viewModel.user.stats?.followers ?? 0, title: "Followers")
+                    UserStatView(value: viewModel.user.stats?.following ?? 0, title: "Following")
+                    
                 }.padding(.trailing, 32)
                 
             }
@@ -37,10 +39,12 @@ struct ProfileHeaderView: View {
                 .font(.system(size: 15,weight: .semibold))
                 .padding([.leading, .top])
             
-            Text("Korea")
-                .font(.system(size: 15))
-                .padding(.leading)
-                .padding(.top, 1)
+            if let bio = viewModel.user.bio {
+                Text(bio)
+                    .font(.system(size: 15))
+                    .padding(.leading)
+                    .padding(.top, 1)
+            }
             
             
             HStack {

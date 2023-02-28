@@ -31,6 +31,7 @@ class NotificationViewModel: ObservableObject {
     
     static func uploadNotification(toUid uid: String, type: NotificationType, post: Post? = nil){
         guard let user = AuthViewModel.shared.curretUser else { return }
+        guard uid != user.id else { return }
         
         
         var data: [String: Any] = ["timestamp": Timestamp(date: Date()),

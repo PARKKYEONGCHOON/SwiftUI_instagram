@@ -17,6 +17,14 @@ class FeedCellViewModel: ObservableObject {
         return "\(post.likes) \(label)"
     }
     
+    var timestampString: String {
+        let formmatter = DateComponentsFormatter()
+        formmatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formmatter.maximumUnitCount = 1
+        formmatter.unitsStyle = .abbreviated
+        return formmatter.string(from: post.timestamp.dateValue(), to: Date()) ?? ""
+    }
+    
     init(post: Post){
         self.post = post
         checkIfUserLikedPost()

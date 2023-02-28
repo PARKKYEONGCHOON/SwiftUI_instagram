@@ -14,12 +14,12 @@ class FeedViewModel: ObservableObject {
     
     init(){
         fetchPost()
-        getPost()
+        //getPost()
         //onepost()
     }
     
     func fetchPost(){
-        Firestore.firestore().collection("posts").getDocuments { snapshot, _ in
+        COLLECTION_POSTS.order(by: "timestamp", descending: true).getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
             
             print("Feed View doc\(documents)")

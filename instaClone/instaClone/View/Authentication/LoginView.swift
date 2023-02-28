@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email = ""
-    @State var password = ""
+    @State private var email = ""
+    @State private var password = ""
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -48,7 +48,8 @@ struct LoginView: View {
                     HStack{
                         Spacer()
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: ResetPasswordView(email: $email),
+                                       label: {
                             Text("Forgot Password?")
                                 .font(.system(size: 13,weight: .semibold))
                                 .foregroundColor(.white)

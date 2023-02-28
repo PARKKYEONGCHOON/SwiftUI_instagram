@@ -10,6 +10,14 @@ import SwiftUI
 class NotificationCellViewModel: ObservableObject {
     @Published var notification: Notification
     
+    var timestampString: String {
+        let formmatter = DateComponentsFormatter()
+        formmatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formmatter.maximumUnitCount = 1
+        formmatter.unitsStyle = .abbreviated
+        return formmatter.string(from: notification.timestamp.dateValue(), to: Date()) ?? ""
+    }
+    
     init(notification: Notification){
         self.notification = notification
         checkifUserIsFollowed()

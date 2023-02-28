@@ -17,4 +17,12 @@ struct Comment: Identifiable, Decodable {
     let timestamp: Timestamp
     let uid: String
     
+    var timestampString: String? {
+        let formmatter = DateComponentsFormatter()
+        formmatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formmatter.maximumUnitCount = 1
+        formmatter.unitsStyle = .abbreviated
+        return formmatter.string(from: timestamp.dateValue(), to: Date()) ?? ""
+    }
+    
 }
