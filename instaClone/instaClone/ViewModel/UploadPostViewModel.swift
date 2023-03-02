@@ -18,13 +18,13 @@ class UploadPostViewModel: ObservableObject {
                         "timestamp": Timestamp(date: Date()),
                             "likes": 0,
                         "imageUrl": imageUrl,
-                        "ownerUrl": user.id as Any,
+                        "ownerUid": user.id as Any,
                         "ownerImageUrl": user.profileImageUrl,
                         "ownerUsername": user.username] as [String : Any]
             
             
             
-            Firestore.firestore().collection("posts").addDocument(data: data, completion: completion) 
+            COLLECTION_POSTS.addDocument(data: data, completion: completion)
             
             
         }

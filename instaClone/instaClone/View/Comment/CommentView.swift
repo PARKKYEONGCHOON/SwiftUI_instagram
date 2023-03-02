@@ -36,7 +36,7 @@ struct CommentView: View {
     }
     
     func uploadComment(){
-        viewModel.uploadComment(commnetText: commentText)
+        viewModel.uploadComment(commentText: commentText)
         commentText = ""
     }
 }

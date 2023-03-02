@@ -18,7 +18,7 @@ class NotificationViewModel: ObservableObject {
     func fetchNotification() {
         guard let uid = AuthViewModel.shared.userSession?.uid else { return }
         
-        let query = COLLECTION_NOTIFICATION.document(uid).collection("user-notification")
+        let query = COLLECTION_NOTIFICATIONS.document(uid).collection("user-notification")
             .order(by: "timestamp", descending: true)
         
         query.getDocuments { snapshot, _ in
@@ -31,7 +31,7 @@ class NotificationViewModel: ObservableObject {
     
     static func uploadNotification(toUid uid: String, type: NotificationType, post: Post? = nil){
         guard let user = AuthViewModel.shared.curretUser else { return }
-        guard uid != user.id else { return }
+        //guard uid != user.id else { return }
         
         
         var data: [String: Any] = ["timestamp": Timestamp(date: Date()),
@@ -44,6 +44,6 @@ class NotificationViewModel: ObservableObject {
             data["postId"] = id
         }
         
-        COLLECTION_NOTIFICATION.document(uid).collection("notification").addDocument(data: data)
+        COLLECTION_NOTIFICATIONS.document(uid).collection("user-notification").addDocument(data: data)
     }
 }

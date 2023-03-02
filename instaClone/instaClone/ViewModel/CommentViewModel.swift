@@ -20,21 +20,22 @@ class CommentViewModel: ObservableObject {
     
     
     
-    func uploadComment(commnetText: String) {
+    func uploadComment(commentText: String) {
         guard let user = AuthViewModel.shared.curretUser else { return }
         guard let postId = post.id else { return }
-        let data:[ String: Any] = ["username": user.username,
-                    "profileImage": user.profileImageUrl,
+        let data: [String: Any] = ["username": user.username,
+                    "profileImageUrl": user.profileImageUrl,
                     "uid": user.id ?? "",
                     "timestamp": Timestamp(date: Date()),
                     "postOwnerUid": post.ownerUid,
-                    "commentText": commnetText]
+                    "commentText": commentText]
         
         COLLECTION_POSTS.document(postId).collection("post-comments").addDocument(data: data) { error in
             if let error = error {
                 print("DEBUG: Error uploading comment \(error.localizedDescription)")
                 return
             }
+            print("Upload Comment")
         }
         
     }
@@ -42,16 +43,26 @@ class CommentViewModel: ObservableObject {
     func fetchComment() {
         guard let postId = post.id else { return }
         
+        //print("\(postId)")
+        
         let query = COLLECTION_POSTS.document(postId).collection("post-comments")
             .order(by: "timestamp", descending: true)
         
+        //print("\(query)")
+        
         query.addSnapshotListener { snapshot, _ in
             guard let addedDocs = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
+            
+            print("\(addedDocs)")
+            
             self.comments.append(contentsOf: addedDocs.compactMap({ try? $0.document.data(as: Comment.self) }))
             
             
             NotificationViewModel.uploadNotification(toUid: self.post.ownerUid, type: .comment, post: self.post)
         }
+        
+        print("\(self.comments)")
+        
     }
     
 }
